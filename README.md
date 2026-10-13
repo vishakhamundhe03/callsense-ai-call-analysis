@@ -174,13 +174,12 @@ The sample audio assets are intended for demonstration of the scripted customer 
 ## Future Improvements
 
 1. Add authentication and role-based access control.
-2. Store call data and analysis in PostgreSQL.
-3. Store recordings securely using private object storage.
+2. Integrate **PostgreSQL with SQLAlchemy ORM** to store and manage customer details, call records, transcripts, and analysis results. Currently, the project uses sample data and does not have database integration.
+3. Store audio recordings securely using **Amazon S3 or another private object storage service**, while storing audio file references and related metadata in PostgreSQL.
 4. Integrate speech-to-text transcription, such as Whisper or an approved transcription API.
-5. Introduce validated NLP or machine-learning models and report their limitations.
+5. Introduce validated NLP or machine-learning models and clearly document their limitations.
 6. Implement consent management, data retention and deletion policies, encryption, audit logs, and personally identifiable information (PII) redaction.
 7. Evaluate model performance using appropriately consented and representative data.
-
 ## Disclaimer
 
 CallSense is a learning and demonstration project. Its sentiment labels and purchase-interest scores should not be treated
