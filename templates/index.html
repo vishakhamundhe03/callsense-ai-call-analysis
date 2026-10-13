@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Call Intelligence · Admin Portal</title>
+  <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="brand"><div class="brand-icon">✦</div><div><strong>CallSense</strong><small>AI INSIGHTS</small></div></div>
+    <div class="nav-label">WORKSPACE</div>
+    <a class="nav active" href="/">▦ <span>Call analytics</span></a>
+    <div class="sidebar-note"><span class="live-dot"></span> Demo workspace <small>4 sample interactions</small></div>
+    <div class="sidebar-bottom">CALL INTELLIGENCE<br><small>Prototype v1.0</small></div>
+  </aside>
+  <main class="main">
+    <header class="topbar"><div><div class="eyebrow">CUSTOMER EXPERIENCE / OVERVIEW</div><h1>Call intelligence</h1><p class="muted">Understand customer intent. Prioritize your next conversation.</p></div><div class="admin"><div class="avatar">AD</div><div><b>Admin</b><small>Workspace owner</small></div></div></header>
+    <section class="stats">
+      <article class="stat"><div class="stat-top">TOTAL CALLS <span class="stat-icon">◷</span></div><div class="stat-number" id="totalCalls">—</div><div class="stat-foot">Sample interactions</div></article>
+      <article class="stat"><div class="stat-top">POSITIVE SENTIMENT <span class="stat-icon green">↗</span></div><div class="stat-number" id="positiveCount">—</div><div class="stat-foot">Calls with positive language</div></article>
+      <article class="stat"><div class="stat-top">AVG. PURCHASE LIKELIHOOD <span class="stat-icon purple">◎</span></div><div class="stat-number" id="avgProbability">—</div><div class="stat-foot">Heuristic estimate · demo only</div></article>
+      <article class="stat"><div class="stat-top">FOLLOW-UP NEEDED <span class="stat-icon amber">↻</span></div><div class="stat-number" id="followUpCount">—</div><div class="stat-foot">Calls below 70% likelihood</div></article>
+    </section>
+    <section class="content-grid">
+      <div class="panel calls-panel"><div class="panel-heading"><div><h2>Customer calls</h2><p class="muted">Select a call to review its recording and analysis.</p></div><span class="pill" id="callCountPill">4 RECORDINGS</span></div>
+        <div class="filter-row"><input id="searchInput" placeholder="Search customer or product…" aria-label="Search calls"><select id="sentimentFilter" aria-label="Filter sentiment"><option value="All">All sentiments</option><option>Positive</option><option>Neutral</option><option>Negative</option></select></div>
+        <div id="callList" class="call-list"><div class="loading">Loading calls…</div></div>
+      </div>
+      <div class="panel detail-panel" id="detailPanel"><div class="empty-state"><div class="empty-icon">◖</div><h2>Select a customer call</h2><p>Call recording, sentiment, purchase probability, and detailed insights will appear here.</p></div></div>
+    </section>
+    <footer>CallSense demo · AI estimates are illustrative and should be validated before production use.</footer>
+  </main>
+  <script src="/static/js/app.js"></script>
+</body></html>
